@@ -1,0 +1,31 @@
+students = {
+    studentFirstName : "Deepak",
+    mentorAssigned : "true",
+    mentorName : "Sanjay",
+    batch: B43WE,
+    course : "FSD"
+}
+
+mentors = {
+    id : 1,
+    mentorName: "Sanjay"
+    mentorBatch: B43WE,
+    course :"FSD",
+}
+
+
+students who has mentor , and student does not has mentor, nu filter panitu, and then we can assign a mentor to the student. 
+
+student who has no mentor ah thani ah vechikitu, and then give them the mentor lists....
+
+
+1. write API to create mentor
+2.  write API to create students
+3. write API to assign a student to an mentor
+3.1 select one mentor and add multiple student
+3.2 student who has a mentor should not be shown in the list
+
+4.  write API to assign or change mentor for particular student.
+4.1 select one mentor and assign a student
+5. write API to show all students for a particular mentor
+6. write an API to show the previously assigned mentor for a particular student. 
