@@ -19,7 +19,7 @@ router.post("/newMentor", async (req, resp) => {
 
     const MentorData = await addMentorsData(MentorreqbodyData);
 
-    resp.json({ zenMentors: MentorData });
+    resp.json(MentorData);
   } catch (error) {
     return resp.status(500).json({ message: "internal server error", error });
   }
@@ -34,8 +34,8 @@ router.get("/getmentors", async (req, resp) => {
       resp.json({ message: "internal server error" });
     }
 
-    const allStudentsData = await showmentorsData(retreieveData);
-    resp.json({ allStudentsData: allStudentsData });
+    const allMentorData = await showmentorsData(retreieveData);
+    resp.json(allMentorData);
   } catch (error) {
     return resp.status(500).json({ message: "internal server error", error });
   }

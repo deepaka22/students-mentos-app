@@ -17,7 +17,7 @@ router.post("/newstudents", async (req, resp) => {
     // if no data available in stureqbodyData this occurs
     const studentsData = await addstudentsData(StureqbodyData);
     // response recieved
-    resp.json({ zenStudents: studentsData });
+    resp.json(studentsData);
   } catch (error) {
     return resp.status(500).json({ message: "internal server error", error });
   }
@@ -33,7 +33,7 @@ router.get("/getstudents", async (req, resp) => {
     }
 
     const allStudentsData = await showStudentsData(retreieveData);
-    resp.json({ allStudentsData: allStudentsData });
+    resp.json(allStudentsData);
   } catch (error) {
     return resp.status(500).json({ message: "internal server error", error });
   }
