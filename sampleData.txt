@@ -19,6 +19,16 @@ students who has mentor , and student does not has mentor, nu filter panitu, and
 student who has no mentor ah thani ah vechikitu, and then give them the mentor lists....
 
 
+
+students has no mentor oru box,
+and mentors oru thani box hu
+
+
+object id from students
+mentor name for student assigned
+mentorAssigned for students as yes
+
+
 1. write API to create mentor
 2.  write API to create students
 3. write API to assign a student to an mentor
