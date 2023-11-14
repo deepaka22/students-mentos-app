@@ -2,6 +2,7 @@ import express from "express";
 import {
   addstudentsData,
   showStudentsData,
+  editStudentsData,
 } from "../controllers/studentControllers.js";
 
 const router = express.Router();
@@ -23,7 +24,25 @@ router.post("/newstudents", async (req, resp) => {
   }
 });
 
-//2. API to get all the students data
+// 2. API for PUT or edit the students details
+
+router.put("/editstudents", async (req, resp) => {
+  try {
+    const retreieveData = req.body;
+
+    if (!retreieveData) {
+      resp.json({ message: "No data was recieved" });
+    }
+
+    const newData = await editStudentsData(retreieveData);
+
+    resp.json(newData);
+  } catch (error) {
+    return resp.status(500).json({ message: "internal server error", error });
+  }
+});
+
+//3. API to get all the students data
 router.get("/getstudents", async (req, resp) => {
   try {
     const retreieveData = {};
